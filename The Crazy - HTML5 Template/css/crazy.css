@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'crazy';
+    src:    url('../fonts/crazy/crazy.eot');
+    src:    url('../fonts/crazy/crazy.eot') format('embedded-opentype'),
+        url('../fonts/crazy/crazy.ttf') format('truetype'),
+        url('../fonts/crazy/crazy.woff') format('woff'),
+        url('../fonts/crazy/crazy.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="cr-"], [class*=" cr-"] {
+    font-family: 'crazy' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.cr-star:before {
+    content: "\e900";
+}
+.cr-gear:before {
+    content: "\e901";
+}
+.cr-send:before {
+    content: "\e902";
+}
+.cr-phone:before {
+    content: "\e903";
+}
+.cr-pencil:before {
+    content: "\e904";
+}
+.cr-magnifier:before {
+    content: "\e905";
+}
+.cr-location:before {
+    content: "\e906";
+}
+.cr-heart:before {
+    content: "\e907";
+}
+.cr-diamond:before {
+    content: "\e908";
+}
+.cr-cup:before {
+    content: "\e909";
+}
+.cr-check:before {
+    content: "\e90a";
+}
+

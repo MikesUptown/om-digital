@@ -1,0 +1,1744 @@
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*This is main CSS file that contains custom style rules used in this template*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* Template Name: The - Crazy*/
+/* Version: 1.0 auto Release*/
+/* Build Date: 14-04-2016*/
+/* Author: Design by unvab. Coded by VLThemes*/
+/* Copyright: (C) 2016 */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------*/
+/* TABLE OF CONTENTS: *//*
+
+	01-IMPORT FONTS
+	02-VARIABLES
+	03-ALL STYLES
+	04-TO TOP
+	05-PRELOADER
+	06-MENU
+	07-TITLE
+	08-PAGE TITLE 
+	09-BREADCRUMBS
+	10-CONTACT
+	11-ABOUT US
+	12-FEATURES
+	13-COUNTERS
+	14-Clients
+	15-Services 
+	16-VIDEO
+	17-PROGRESS BAR
+	18-OUR TEAM 
+	19-TESTIMONIAL
+	20-BLOG 
+	21-POST SINGLE
+	22-COMMENTS
+	23-PORTFOLIO
+	24-FILTERS
+	25-SINGLE WORK
+	26-FOOTER
+
+ *//*--------------------------------------------------------*/
+
+
+
+
+/*----------------------*/ 
+/*   01-IMPORT FONTS    */ 
+/*----------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black')
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,300,400italic,700')
+
+@import ('crazy.css')
+
+@require 'shortcodes.styl'
+
+/*----------------------*/ 
+/*   02-VARIABLES       */ 
+/*----------------------*/
+
+$f1 = 'Roboto', sans-serif
+$f2 = 'Archivo Black', sans-serif
+$white = #ffffff
+$black = #171717
+$lblack = #161616
+$cyan = #0de7cb
+$blue = #020033
+$yellow = #fdedc5
+$pink = #f1cdde
+$text = #393939
+
+/*----------------------*/ 
+/*   03-ALL STYLES      */ 
+/*----------------------*/
+	
+$frame-wh = 30px
+
+.frame-line
+	position fixed
+	left 0
+	right 0
+	display block
+	background $cyan
+	z-index 888
+	&.top-frame
+		height $frame-wh
+		top -($frame-wh)
+	&.bottom-frame
+		height $frame-wh
+		bottom -($frame-wh)
+	&.right-frame
+		width $frame-wh
+		right -($frame-wh)
+		height 100%
+		left auto
+		top 0
+	&.left-frame
+		width $frame-wh
+		left -($frame-wh)
+		height 100%
+		right auto
+		top 0
+	&.animated
+		transition all .35s ease-in-out
+		&.top-frame
+			top 0
+		&.bottom-frame
+			bottom 0
+		&.right-frame
+			right 0
+		&.left-frame
+			left 0	
+
+body
+	background-color $white
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+	position relative
+	min-width 320px
+	font-family $f1
+	line-height 1.8
+	font-size 16px
+	letter-spacing 0.5px
+	color $text
+	margin 30px
+
+@media only screen and (max-width: 768px)
+	.frame-line
+		display none
+	body
+		margin 0 !important
+		
+a
+	text-decoration none
+	color inherit
+	transition color .3s ease-in-out, background-color .2s ease-in-out
+	&:hover, &:focus
+		text-decoration none
+		outline none
+	&:hover
+		color $cyan
+		text-decoration underline
+
+h1, h2, h3, h4, h5, h6
+	font-weight 600
+	line-height 2em
+	font-family $f2
+	margin 15px 0
+	color $black
+
+h1
+	font-size 40px
+	
+h2
+	font-size 36px
+
+h3
+	font-size 28px
+
+h4
+	font-size 24px
+
+h5
+	font-size 18px
+
+h6
+	font-size 16px
+
+h4, h5, h6
+	font-family $f1	
+
+p
+	margin 0 0 20px 0
+	padding 0
+
+b,
+strong
+	font-weight 700
+	
+i, em
+	font-style italic
+
+ul, ol
+	&.list-none
+		list-style-type none
+		padding 0
+		margin 0
+		
+img
+	border 0
+	height auto
+	max-width: 100%
+	vertical-align middle
+
+blockquote
+	border-left 1px solid $black
+	font-style italic
+	color $lblack
+	display block
+	margin 40px 0
+	padding-left 30px
+	&::after
+		content ''
+		clear both
+		display table
+
+.btn
+	display inline-block
+	text-transform uppercase
+	text-align center
+	color $black
+	font-size 16px
+	font-weight 700
+	padding 20px 70px
+	position relative
+	outline none
+	background-color transparent
+	border 3px solid $lblack
+	span
+		position relative
+		z-index 2
+	&::after
+		content ''
+		background-color $lblack
+		top 0
+		left 0
+		right 0
+		height 0
+		position absolute
+		z-index 1
+		transition all .2s ease-in-out
+		
+.btn:hover
+	color $white
+	text-decoration none
+	&::after
+		height 100%
+
+.btn-white
+	color $white
+	&:hover
+		color $white
+
+.btn:focus
+	outline none
+	
+.btn.disable
+	cursor default		
+
+.btn.line-vert
+	&::before
+		content ''
+		display block
+		position absolute
+		width 1px
+		height 100%
+		top -85%
+		left 50%
+		z-index 22
+		background-color $cyan
+		transition all .2s ease-in-out
+	&:hover::before
+		top 85%
+		
+.btn.line-hor
+	&::before
+		content ''
+		display block
+		position absolute
+		width 80px
+		height 1px
+		top 50%
+		left 100%
+		z-index 22
+		margin-left -10px
+		background-color $cyan
+		transition all .2s ease-in-out
+	&:hover::before
+		left -70px
+		margin-left 0
+
+
+@media (max-width: 480px)
+	.btn
+		padding 12px 40px
+
+.btn-play
+	height 80px
+	width 80px
+	padding 0
+	line-height 80px
+
+.form-control
+	position relative
+	
+input, textarea
+	border none
+	border-bottom 1px solid $white
+	border-top none
+	border-left none
+	border-right none
+	outline none
+	display block
+	width 100%
+	max-width 100%
+	background-color transparent
+	padding 13px 15px
+	color $white
+	&:focus + .line-input
+		transform scaleX(1)
+
+.line-input
+	position absolute
+	bottom 0
+	height 1px
+	left 0
+	right 0
+	background-color $cyan
+	transform scaleX(0)
+	transition all .35s ease-in-out
+
+.form-black
+	input, textarea
+		color $black
+		border-color $black
+
+.jarallax
+	position relative
+	background-size cover
+	background-repeat no-repeat
+	background-position 50% 50%
+
+.tlt
+	visibility hidden
+
+.overlay
+	position absolute
+	width 50%
+	top -5px
+	left 25%
+	bottom -5px
+	z-index 1
+	background-color rgba($yellow,.90)
+	transform skewX(-30deg)
+	&::before, &::after
+		content ''
+		position absolute
+		top -5px
+		bottom -5px
+		width 100%
+		background-color rgba($pink, .90)
+	&::before
+		left 100%
+		margin-left -1px
+	&::after
+		right 100%
+		margin-right -1px
+	~ .container
+		position relative
+		z-index 5
+
+.pattern-bottom
+	position absolute
+	z-index 20
+	bottom 0
+	left 0
+	right 0
+	background url('../img/pattern-bottom.png')
+	background-repeat repeat-x
+	height 16px
+
+$pattern-top-h = 20px
+.pattern-top
+	position absolute
+	z-index 20
+	top -($pattern-top-h)
+	left 0
+	right 0
+	background url('../img/pattern-top-yellow.png')
+	background-repeat repeat-x
+	height 20px
+	
+.sep-line
+	display block
+	position relative
+	&::after
+		content ''
+		top 0
+		position absolute
+		left 0
+		right 0
+		display block
+		height 3px
+		background-color $black
+		
+@media (min-width: 1500px)
+	.sep-line::after
+		left -100px !important
+		right -100px !important
+
+/*----------------------*/ 
+/*   04-TO TOP          */ 
+/*----------------------*/
+
+.crazy-loading
+	background-color transparent
+	position fixed
+	top 50%
+	left 50%
+	margin-left -25px
+	margin-top -25px
+	height 50px
+	width 50px
+	border-radius 50%
+	border-top 3px solid $lblack
+	animation fa-spin 2s infinite linear
+	
+/*----------------------*/ 
+/*   05-PRELOADER       */ 
+/*----------------------*/
+
+.toTop
+	height 40px
+	width 40px
+	position fixed
+	bottom 30px
+	right 30px
+	background-color $yellow
+	color $black
+	overflow hidden	
+	text-align center
+	opacity 0
+	visibility hidden
+	line-height 40px
+	z-index 666
+	transition opacity 0.3s 0s, visibility 0s 0.3s
+	&:hover
+		text-decoration none
+		i
+			animation animateIconTop 0.3s forwards
+		
+.toTop.cd-is-visible,
+.toTop.cd-top.cd-fade-out
+	transition opacity 0.3s 0s, visibility 0s 0s
+  
+.cd-is-visible
+	visibility visible
+	opacity 1
+
+.cd-top.cd-fade-out
+	opacity 0.5
+
+
+@media (max-width: 768px)
+	.toTop
+		display none
+
+/*----------------------*/ 
+/*   06-MENU            */ 
+/*----------------------*/
+
+.crazy-navbar
+	position absolute
+	top 0
+	left 0
+	right 0
+	z-index 100
+	.container
+		position relative
+
+.crazy-logo
+	float left
+	line-height 122px
+
+.crazy-nav
+	float right
+
+.sf-menu
+	list-style none
+
+.sf-menu li
+	position relative
+	
+.sf-menu > li
+	padding 45px 0
+	
+.sf-menu ul 
+	position absolute
+	display none
+	list-style-type none
+	padding 0
+	margin 0
+	top calc(100% - 3px)
+	min-width 200px
+	padding 25px
+	left 0
+	z-index 99
+	background-color $white
+	border-top 3px solid $cyan
+	li
+		a
+			display block
+			text-transform uppercase
+			color $black
+			line-height 35px
+			&:hover
+				text-decoration none
+				color $cyan
+
+@keyframes fadeMenu
+	0%
+		transform translateY(10px)
+		opacity 0
+	100%
+		transform translateY(0)
+		opacity 1
+
+.sf-menu > li
+	float left
+
+.sf-menu li:hover > ul,
+.sf-menu li.sfHover > ul
+	display block
+	animation fadeMenu .25s forwards
+
+.sf-menu a
+	display block
+	position relative
+
+.sf-menu ul ul
+	top 0
+	left 100%
+
+.sf-menu
+	margin 0
+	padding 0
+	> li
+		margin-left 38px
+		> a
+			font-size 16px
+			display block
+			font-weight 700
+			text-transform uppercase
+			color $lblack
+			position relative
+			padding 2px 0
+			&::after
+				content ''
+				position absolute
+				bottom 0
+				left 0
+				height 3px
+				display block
+				width 0
+				background-color $cyan
+				transition all .35s ease-in-out
+			&:hover
+				text-decoration none		
+		&:hover > a::after, &.current-menu-item > a::after, &.sfHover > a::after
+			width 24px
+			
+.crazy-border
+	position absolute
+	top 0
+	left 0
+	right 0
+	bottom 0
+	z-index -1
+	border-bottom 3px solid $lblack
+	
+@media (min-width: 1500px)
+	.crazy-border
+		left -100px
+		right -100px
+
+.mobile-menu-wrap
+	display none
+	position relative
+	z-index 888
+	nav
+		background-color $white
+		border-bottom 3px solid $black
+		ul
+			margin 0
+			padding 15px
+			li
+				padding 5px 0
+				> a
+					display block
+					color $black
+				&:hover >a, &.current-menu-item >a
+					color $cyan
+					text-decoration none
+				&:hover > ul
+					display block
+				ul
+					list-style-type none
+					padding 0
+					margin 0
+					display none
+				
+
+.open-menu
+	float right
+	display none
+	text-align center
+	position relative
+	line-height 122px
+	z-index 222
+	&.isActive	
+		.burger-icon i
+			background-color transparent
+			&::before
+				transform translateY(8px) rotate(45deg)
+			&::after
+				transform translateY(-8px) rotate(-45deg)	
+				
+$gb = 8px
+
+.burger-icon
+	display inline-block
+	position relative
+	z-index 1
+	top 5px
+	
+.burger-icon i
+	position relative
+	margin-top $gb
+	margin-bottom $gb
+	&, &::before, &::after
+		width 30px
+		height 3px
+		background-color $lblack
+		display block
+		transition-duration .3s
+		transition-property background-color, transform
+
+.burger-icon i
+	&::before, &::after
+		content ''
+		position absolute
+
+.burger-icon i::before
+	top -($gb)
+	
+.burger-icon i::after
+	top $gb
+	
+@media (max-width: 992px)
+	.open-menu
+		display block
+	.crazy-nav
+		display none
+/*----------------------*/ 
+/*   07-TITLE           */ 
+/*----------------------*/
+
+.section-title
+	text-align center
+	margin-bottom 100px
+	h2
+		text-transform uppercase
+		font-family $f2
+		font-size 120px
+		letter-spacing 5px
+		color #d7d7d7
+		line-height 1em
+		margin 0
+	em
+		display block
+		margin-top 35px
+		font-size 18px
+		color $black
+
+.section-title-sm
+	text-align center
+	margin-bottom 100px
+	h2
+		font-size 36px
+		text-transform uppercase
+		margin-top 0
+		margin-bottom 0
+	em
+		display block
+		margin-top 35px
+		font-size 18px
+		color $black
+	
+@media (max-width: 992px)
+	.section-title h2
+		font-size 90px
+
+@media (max-width: 768px)
+	.section-title h2
+		font-size 64px
+	.section-title, .section-title-sm
+		em
+			font-size 16px
+		
+@media (max-width: 480px)
+	.section-title h2
+		font-size 40px
+		
+/*----------------------*/ 
+/*   08-PAGE TITLE      */ 
+/*----------------------*/
+
+.title-home
+	background-size cover
+	padding-top 260px
+	overflow hidden
+	position relative
+	background-position center center	
+	h1, h1 span
+		font-size 60px
+		min-height 60px
+		text-transform uppercase
+		margin-bottom 30px
+		line-height 1em
+		color $lblack
+	h1 span
+		color $cyan
+	em
+		color $lblack
+	.buttons
+		.btn
+			margin 0
+			
+.goto
+	position relative
+	padding 50px 0
+	a
+		color $white
+		text-transform uppercase
+		font-weight 700
+		margin 0 15px
+		&:hover
+			color $cyan
+			text-decoration none
+
+@media (max-width: 992px)
+	.title-home
+		h1, h1 span
+			font-size 48px
+			min-height 48px
+
+@media (max-width: 768px)
+	.title-home
+		h1, h1 span
+			font-size 34px
+			min-height 34px
+	.goto
+		display none
+
+
+@media (max-width: 480px)
+	.buttons
+		.btn
+			display block
+
+.page-title
+	position relative
+	overflow hidden
+	padding 260px 0 150px 0
+	background-size cover
+	background-position center center
+	background-repeat no-repeat
+	h1
+		font-size 60px
+		letter-spacing 3px
+		margin 0
+		padding 0
+		line-height 1em
+		font-family $f2
+		color $lblack
+		text-transform uppercase
+		display inline-block
+		position relative
+		&::before, &::after
+			content '\e870'
+			position absolute
+			font-family 'Linearicons-Free'
+			top 0
+			font-size 16px
+		&::before
+			left -46px
+		&::after
+			right -46px
+
+@media (max-width: 768px)
+	.page-title h1
+		font-size 46px
+	
+@media (max-width: 480px)
+	.page-title h1
+		font-size 22px
+		&::before
+			left -26px
+		&::after
+			right -26px
+
+/*----------------------*/ 
+/*   09-BREADCRUMBS     */ 
+/*----------------------*/
+
+.breadcrumbs
+	margin-top 30px
+	ul
+		display inline-block
+		margin 0
+		padding 0
+		li
+			float left
+			color $lblack
+			+li::before
+				content '/'
+				margin 0 3px
+			a:hover
+				text-decoration none
+				color $cyan
+
+/*----------------------*/ 
+/*   10-CONTACT         */ 
+/*----------------------*/
+
+.contacts-wrap
+	padding-top 60px
+	padding-bottom 30px
+	position relative
+	
+.contact-item
+	position relative
+	padding-left 70px
+	display inline-block
+	margin-bottom 30px
+	p
+		margin-bottom 0
+		text-align left
+		color $text
+	i
+		position absolute
+		top 50%
+		left 0
+		margin-top -21px
+		font-size 45px
+		color $lblack
+
+.map
+	width 100%
+	height 735px
+	
+@media (max-width: 768px)
+	.map
+		height 400px
+
+/*----------------------*/ 
+/*   11-ABOUT US        */ 
+/*----------------------*/
+
+.info-block-wrap
+	position relative
+	.info-block
+		background-color $white
+		box-shadow 0px 0px 50px 0px rgba($black,.15)
+		margin-top 95px
+		padding 80px
+		color $lblack
+		h3
+			text-transform uppercase
+			margin-top 0
+			margin-bottom 40px
+			color $lblack
+	.image-block
+		position absolute
+		top 0
+		bottom 95px
+		right 0
+		margin-right 15px
+		margin-left 15px
+		z-index -1
+		background-size cover
+		background-position center center
+		background-repeat no-repeat
+	.owl-item
+		padding-right 20px
+	.owl-dots
+		display block
+		margin-top 20px
+		.owl-dot
+			display inline-block
+			height 8px
+			width 8px
+			border-radius 50%
+			background-color transparent
+			border 1px solid $black
+			margin-right 8px
+			&.active
+				background-color $black
+				transform scale(1.5)
+
+.love-block
+	text-align center
+	margin 100px 0
+	h2
+		text-transform uppercase
+		i
+			font-size 48px
+			transition all .25s ease-in-out
+			animation heartbeat 2s infinite
+
+@keyframes heartbeat
+	0%
+		opacity 1
+	14%
+		opacity 0.3
+	28%
+		opacity 1
+	42%
+		opacity 0.3
+	70%
+		opacity 1
+			
+@media (max-width: 992px)
+	.info-block-wrap
+		.info-block
+			margin-top 0
+		.image-block
+			position static
+			height 500px
+
+@media (max-width: 768px)
+	.love-block
+		h2
+			font-size 24px
+			i
+				font-size 36px
+				
+@media (max-width: 480px)
+	.info-block-wrap
+		.image-block
+			height 400px
+		.info-block
+			padding 40px
+
+
+/*----------------------*/ 
+/*   12-FEATURES        */ 
+/*----------------------*/
+
+.features
+	color $lblack
+	text-align center
+	background-size cover
+	background-position center center
+	background-repeat no-repeat
+	position relative
+	.feature-item
+		.item-head
+			position relative
+			display block
+			i
+				font-size 43px
+		h6
+			text-transform uppercase
+			margin-top 15px
+			margin-bottom 0
+			padding 0
+			color $lblack
+		p
+			margin-top 20px
+			margin-bottom 0
+			padding 0
+			color $lblack
+	
+/*----------------------*/ 
+/*   13-COUNTERS        */ 
+/*----------------------*/
+
+.counters
+	background-color $yellow
+	color $lblack
+	text-align center
+	background-size cover
+	background-position center center
+	background-repeat no-repeat
+	position relative
+	.counter-item
+		.item-head
+			position relative
+			display block
+			i
+				font-size 43px
+		h6
+			margin 0
+			padding 0
+			font-size 36px
+			font-family $f2
+			color $lblack
+		p
+			margin 0
+			padding 0
+			font-size 16px
+			font-weight 700
+			text-transform uppercase
+			color $lblack
+				
+@media (max-width: 992px)
+	.counter-item .col-sm-6,
+	.feature-item .col-sm-6
+		margin-bottom 30px
+						
+@media (min-width: 992px)
+	.counter-item .item-head::after,
+	.feature-item .item-head::after
+		content '\e870'
+		position absolute
+		font-size 16px
+		top 50%
+		right 0
+		margin-right -(15px+10px)
+		margin-top -8px
+		font-family 'Linearicons-Free'
+	.counter-item:last-child .item-head::after,
+	.feature-item:last-child .item-head::after
+		display none
+
+/*----------------------*/ 
+/*   14-Clients         */ 
+/*----------------------*/
+
+.clients
+	position relative
+	background-size cover
+	background-position center center
+	background-repeat no-repeat
+	img
+		display inline-block
+
+/*----------------------*/ 
+/*   15-Services        */ 
+/*----------------------*/
+
+.sep-with-icon
+	position relative
+	i
+		height 100px
+		width 100px
+		line-height 100px
+		text-align center
+		display block
+		font-size 45px
+		color $white
+		background-color $lblack
+	span
+		display block
+		height 3px
+		background-color $lblack
+		position absolute
+		left 150px
+		top 50%
+		margin-top -1px
+		right 0
+
+.services-nav
+	height 60px
+	line-height 60px
+	i
+		margin-right 8px
+		font-size 22px
+		color $lblack
+		cursor pointer
+		transition color .3s ease-in-out
+		&:hover
+			color $cyan
+
+@media (min-width: 1500px)
+	.sep-with-icon
+		i
+			margin-left -100px
+		span
+			left 50px
+			right -100px
+
+/*----------------------*/ 
+/*   16-VIDEO           */ 
+/*----------------------*/
+
+.video-section
+	text-align center
+	h2
+		font-size 60px
+		line-height 1em
+		margin 0 0 55px 0
+		padding 0
+		text-transform uppercase
+		color $white
+	em
+		color $white
+
+@media (max-width: 768px)
+	.video-section
+		h2
+			font-size 34px
+
+/*----------------------*/ 
+/*   17-PROGRESS BAR    */ 
+/*----------------------*/
+
+ul.progress-bar
+	margin 0
+	padding 0
+	list-style-type none
+	li
+		margin-bottom 30px
+		color $black
+		&:last-child
+			margin-bottom 0
+		strong
+			text-transform uppercase
+		i
+			font-style normal
+		p
+			margin-bottom 7px
+			
+.bar-wrap
+	position relative
+	display block
+	width 100%
+	height 6px
+	background-color #e7e7e7
+	span
+		position absolute
+		top 0
+		left 0
+		bottom 0
+		width 0
+		background-color $cyan
+
+/*----------------------*/ 
+/*   18-OUR TEAM        */ 
+/*----------------------*/
+
+.team-item
+	position relative
+	.team-header
+		position relative
+		overflow hidden
+	.team-footer
+		border-top 2px solid $lblack
+		margin-top 30px
+		padding-top 22px
+		h6
+			margin-top 0
+			color $black
+			text-transform uppercase
+
+.social-wrap
+	position absolute
+	bottom -100%
+	opacity 0
+	left 0
+	right 0
+	background-color $pink
+	padding 16px 0
+	text-align center
+	transition all .45s ease
+	ul
+		display inline-block
+		margin-top 10px
+		li
+			float left
+			margin 0 10px
+			a
+				display block
+				font-size 22px
+				line-height 1em
+				color $lblack
+
+.social-wrap a:hover
+	color $cyan
+	i
+		animation animateIconBottom 0.3s forwards
+
+.team-item:hover
+	.social-wrap
+		bottom 0
+		opacity 1
+					
+/*----------------------*/ 
+/*   19-TESTIMONIAL     */ 
+/*----------------------*/
+
+
+.testimonial-wrap
+	position relative
+	text-align center
+	.owl-item
+		width 100%
+	h3
+		text-transform uppercase
+		margin-top 10px
+		font-size 16px
+		font-family $f1
+	p
+		padding 0 60px
+		margin-bottom 0
+	.avatar-wrap
+		display inline-block
+		img
+			border-radius 50%
+			height 200px
+			width 200px
+
+.testimonial-nav
+	i
+		padding 0 4px
+		font-size 22px
+		line-height 30px
+		color $lblack
+		cursor pointer
+		position absolute
+		top 50%
+		margin-top -11px
+		z-index 10
+		transition color .3s ease-in-out
+		&:hover
+			color $cyan
+		&.lnr-arrow-left
+			left 30px
+		&.lnr-arrow-right
+			right 30px
+
+@media (max-width: 768px)
+	.testimonial-wrap
+		.avatar-wrap img
+			height 100px
+			width 100px
+		p
+			padding 0 30px
+			
+@media (max-width: 480px)
+	.testimonial-nav
+		display none
+	.testimonial-wrap
+		.avatar-wrap img
+			height 80px
+			width 80px		
+		p
+			padding 0
+
+/*----------------------*/ 
+/*   20-BLOG            */ 
+/*----------------------*/
+
+.blog-masonry .isotope-item
+	float left
+	width 33.333%
+	padding 0 15px
+
+@media only screen and (max-width : 992px)
+	.blog-masonry .isotope-item
+		width 50%
+
+@media only screen and (max-width : 768px)
+	.blog-masonry .isotope-item
+		width 100%
+
+.blog-item
+	h6
+		text-transform uppercase
+		margin 15px 0
+		a:hover
+			text-decoration none
+
+.blog-item
+	margin-bottom 30px
+	.thumb
+		position relative
+		margin-bottom 30px
+		
+.blog-meta
+	span.date
+		color #6a6a6a
+		line-height 28px
+	a
+		margin-right 20px
+		&:hover
+			text-decoration none
+		i
+			color $cyan
+			margin-right 4px
+
+.blog-item:not(.large):not(.full-img)
+	.thumb::after
+		content ''
+		position absolute
+		bottom 0
+		left 50%
+		width 0
+		z-index 2
+		height 0
+		margin-left -12px
+		border-left 12px solid transparent
+		border-right 12px solid transparent
+		border-bottom 12px solid $white	
+
+.blog-item.large
+	.thumb
+		margin-bottom 0
+		&::after
+			content ''
+			position absolute
+			top 50%
+			right 0
+			width 0
+			z-index 2
+			height 0
+			margin-top -12px
+			border-top 12px solid transparent
+			border-bottom 12px solid transparent
+			border-right 12px solid $white
+	.post-content
+		margin-top 50px
+
+.blog-item.full-img
+	padding 4px
+	background-size cover
+	background-position center center
+	box-shadow inset 0px 0px 0px 4px $lblack
+	text-align center
+	margin-bottom 30px
+	.post-content
+		margin 70px 40px
+
+/*----------------------*/ 
+/*   21-POST SINGLE     */ 
+/*----------------------*/
+
+.post-single
+	h6
+		font-size 30px
+		text-transform none
+		margin 0
+		padding 0
+
+.post-single
+	.thumb+.post-content
+		h6
+			margin-top 80px
+
+.post-single
+	.blog-meta
+		float left
+		margin-right 40px
+		margin-bottom 15px
+		margin-top 5px
+
+.blog-video-wrap
+	position relative
+	.blog-video-content
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 100%
+		background-color rgba($black, .4)
+		a
+			position absolute
+			top 50%
+			left 50%
+			transform translateX(-50%) translateY(-50%)
+			
+/*----------------------*/ 
+/*   22-COMMENTS        */ 
+/*----------------------*/
+
+.comment-title
+	font-size 30px
+	margin-bottom 40px
+	margin-top 0
+	font-family $f1
+	
+.comment-list
+	.media
+		margin-bottom 45px
+		&.reply-comment
+			margin-left 150px
+	.comment-img
+		height 130px
+		width 130px
+	.media-body
+		padding-left 25px
+		p
+			margin-bottom 10px
+		h6
+			font-size 16px
+			text-transform uppercase
+			color $black
+			font-weight 700
+			margin 0 0 10px 0
+			padding 0
+			span
+				font-weight 400
+				text-transform none
+				color #6a6a6a
+				font-size 14px
+				margin-left 10px
+		.comment-meta
+			a
+				margin-right 15px
+				color $cyan
+		
+.post-comment
+	text-align center
+	padding 50px
+	max-width 770px
+	background-color $white
+
+.remodal-overlay
+	background rgba($black, .5)
+
+.remodal-close-popup
+	position absolute
+	right 20px
+	top 20px
+	border none
+	width 30px
+	height 30px
+	line-height 30px
+	text-align center
+	background none
+	i
+		color #dcdcdc
+		font-size 18px
+		line-height 20px
+		transition all .25s ease-in-out
+	&:hover
+		i
+			color $cyan
+
+
+.remodal-close-popup:focus,
+.remodal-close-popup:active
+	outline none
+
+  
+@media (max-width: 768px)
+	.comment-list
+		.media.reply-comment
+			margin-left 60px
+		.comment-img
+			height 80px
+			width 80px
+		.media-body
+			padding-left 15px
+			
+@media (max-width: 480px)
+	.comment-list
+		.media.reply-comment
+			margin-left 0
+
+/*----------------------*/ 
+/*   23-PORTFOLIO       */ 
+/*----------------------*/
+
+.crazy-portfolio-masonry-wrapper[data-col="3"] .crazy-portfolio-item
+	float left
+	width 33.333%
+
+.crazy-portfolio-masonry-wrapper[data-col="2"] .crazy-portfolio-item
+	float left
+	width 50%
+
+.crazy-portfolio-masonry-wrapper[data-col="4"] .crazy-portfolio-item
+	float left
+	width 25%
+
+@media only screen and (max-width  768px)
+	.crazy-portfolio-masonry-wrapper[data-col="3"] .crazy-portfolio-item,
+	.crazy-portfolio-masonry-wrapper[data-col="4"] .crazy-portfolio-item
+		width 50%
+
+@media only screen and (max-width  480px)
+	.crazy-portfolio-masonry-wrapper[data-col="2"] .crazy-portfolio-item,
+	.crazy-portfolio-masonry-wrapper[data-col="3"] .crazy-portfolio-item,
+	.crazy-portfolio-masonry-wrapper[data-col="4"] .crazy-portfolio-item
+		width 100%
+
+.crazy-portfolio-item
+	overflow hidden
+	padding 15px
+	a
+		display block
+		position relative
+		background-color $cyan
+	.image-wrap
+		background-size cover
+		padding-top 100%
+		background-position center center
+		transition all .32s cubic-bezier(0.390, 0.575, 0.565, 1.000)
+	&:hover 
+		.image-wrap
+			transform scale(.95)		
+
+/*----------------------*/ 
+/*   24-FILTERS         */ 
+/*----------------------*/
+
+.filters-wrap
+	padding-top 60px
+	padding-bottom 40px
+	position relative
+	
+.filters
+	display inline-block
+	position relative
+	text-align center
+	li
+		position relative
+		text-align center
+		display inline-block
+		color $black
+		transition all .25s ease-in-out
+		margin 0 20px
+		padding 6px 0
+		span
+			display block
+			text-transform uppercase
+			font-weight 700
+			cursor pointer
+		&:hover
+			color $cyan
+		&.active-filter span
+			animation anim-filter 0.4s forwards
+
+
+@keyframes anim-filter
+	50% 
+		opacity 0
+		color #929292
+		transform translate3d(80%, 0, 0)
+	51%
+		opacity 0
+		color lighten($cyan, 5%)
+		transform translate3d(-80%, 0, 0)
+	75% 
+		opacity 1
+		transform translate3d(5px, 0, 0)
+	100% 
+		opacity 1
+		color $cyan
+		transform translate3d(0, 0, 0)
+
+.borders
+	position absolute
+	top 0
+	left 0
+	right 0
+	bottom 0
+	z-index -1
+	border-top 3px solid $lblack
+	border-bottom 3px solid $lblack
+	
+@media (min-width: 1500px)
+	.borders
+		left -100px
+		right -100px
+
+@media (max-width: 480px)
+	.filters
+		li
+			float none
+			display block !important
+
+/*----------------------*/ 
+/*   25-SINGLE WORK     */ 
+/*----------------------*/
+
+.single-work-wrap
+	padding-top 60px
+	padding-bottom 50px
+	position relative
+	.work-meta
+		h6
+			text-transform uppercase
+			color $black
+			display block
+			position relative
+			margin 0
+			padding 0
+			span
+				font-weight normal
+				text-transform none
+
+@media (min-width: 992px)
+	.single-work-wrap .work-meta h6::after
+		content '\e870'
+		position absolute
+		font-size 16px
+		top 0
+		right 0
+		margin-right -(15px+10px)
+		font-family 'Linearicons-Free'
+	.single-work-wrap .work-meta:last-child h6::after
+		display none
+		
+.vl-portfolio-masonry-wrapper .vl-portfolio-item
+	padding 15px
+
+.vl-portfolio-masonry-wrapper .vl-portfolio-item
+	float left
+	width 33.333%
+
+.vl-portfolio-masonry-wrapper .vl-portfolio-item.tall .vl-image-wrap
+	padding-top 200%
+	padding-top calc( 200% + 30px)
+
+.vl-portfolio-masonry-wrapper .vl-portfolio-item.large
+	width 66.666%
+
+@media only screen and (max-width : 768px)
+	.vl-portfolio-masonry-wrapper .vl-portfolio-item.large
+		width 100%
+
+@media only screen and (max-width : 768px)
+	.vl-portfolio-masonry-wrapper[data-col="3"] .vl-portfolio-item
+		width 50%
+
+@media only screen and (max-width : 480px)
+	.vl-portfolio-masonry-wrapper[data-col="3"] .vl-portfolio-item
+		width 100%
+	.vl-portfolio-masonry-wrapper[data-col="4"] .vl-portfolio-item.large
+		width 100%
+
+.vl-portfolio-masonry-wrapper
+	.vl-portfolio-item
+		position relative
+		.vl-image-wrap
+			background-size cover
+			background-position 50% 50%
+			position relative
+			padding-top 100%
+
+.single-work-slider, .blog-slider
+	position relative
+	.owl-dots
+		display block
+		position absolute
+		left 0
+		bottom 22px
+		width 100%
+		text-align center
+		.owl-dot
+			display inline-block
+			height 8px
+			width 8px
+			border-radius 50%
+			background-color transparent
+			border 1px solid $black
+			margin-right 8px
+			&.active
+				background-color $black
+				transform scale(1.5)
+				
+.blog-slider .owl-dots .owl-dot
+	border-color $white
+	&.active
+		background-color $white	
+
+/*----------------------*/ 
+/*   26-FOOTER          */ 
+/*----------------------*/
+
+.footer-inner
+	padding 90px 0
+	margin-top $pattern-top-h
+	position relative !important
+	background-color $yellow
+
+footer
+	text-align center
+	position relative
+	background-size cover
+	background-repeat no-repeat
+	background-position center center
+	h2
+		font-size 60px
+		color $lblack
+		margin 0
+		padding 0
+		text-transform uppercase
+		
+.footer-social
+	ul
+		display inline-block
+		li
+			float left
+			margin 0 8px
+			a
+				display block
+				font-size 22px
+				color $lblack
+				
+.footer-social a:hover
+	color $cyan
+	text-decoration none
+	i
+		animation animateIconTop 0.3s forwards	
+
+.footer-copy
+	p
+		margin 0
+		padding 0
+		color $lblack
+	a
+		color $lblack
+
+.return-msg
+	color #fe3237
+	margin-top 10px
+	text-transform uppercase
+	letter-spacing 2px
+	font-size 13px
+
+.border-top
+	position absolute
+	top 0
+	left 0
+	right 0
+	bottom 0
+	z-index -1
+	border-top 3px solid $white
+
+@media (min-width: 1500px)
+	.border-top
+		left -100px
+		right -100px
+
+@media (max-width: 768px)
+	footer
+		h2
+			font-size 44px
