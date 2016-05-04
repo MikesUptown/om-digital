@@ -379,13 +379,13 @@ jQuery.noConflict()(function ($) {
 
         $(".typed").typed({
             strings: [
-                "we are crazy",
+                "design | development | content",
                 "feel every moment",
                 "Trendy designs"
             ],
             typeSpeed: 50,
             backSpeed: 20,
-            loop: true,
+            loop: false,
             backDelay: 2500,
             showCursor: false
         });
