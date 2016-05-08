@@ -741,7 +741,8 @@
   left: 0;
   right: 0;
   display: block;
-  background: #0de7cb;
+  /* background: #0de7cb; */
+  background: #E9BEB5;
   z-index: 888;
 }
 .frame-line.top-frame {
