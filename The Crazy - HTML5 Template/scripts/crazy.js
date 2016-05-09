@@ -379,9 +379,9 @@ jQuery.noConflict()(function ($) {
 
         $(".typed").typed({
             strings: [
-                "design | development | content",
-                "feel every moment",
-                "Trendy designs"
+                "design",
+                "development",
+                "content"
             ],
             typeSpeed: 50,
             backSpeed: 20,
