@@ -741,7 +741,8 @@
   left: 0;
   right: 0;
   display: block;
-  background: #0de7cb;
+  /* background: #0de7cb; */
+  background: #E9BEB5;
   z-index: 888;
 }
 .frame-line.top-frame {
@@ -899,7 +900,8 @@ blockquote::after {
   position: relative;
   outline: none;
   background-color: transparent;
-  border: 3px solid #0de7cb;
+  /* border: 3px solid #0de7cb; */
+  border: 3px solid #E9BEB5;
 }
 .btn span {
   position: relative;
@@ -907,7 +909,8 @@ blockquote::after {
 }
 .btn::after {
   content: '';
-  background-color: #0de7cb;
+  /* background-color: #0de7cb; */
+  background-color: #E9BEB5;
   top: 0;
   left: 0;
   right: 0;
@@ -1207,7 +1210,8 @@ textarea:focus + .line-input {
   height: 3px;
   display: block;
   width: 0;
-  background-color: #0de7cb;
+  /* background-color: #0de7cb; */
+  background-color: #E9BEB5;
   transition: all 0.35s ease-in-out;
 }
 .sf-menu > li > a:hover {
@@ -1420,7 +1424,8 @@ textarea:focus + .line-input {
   margin: 0 15px;
 }
 .goto a:hover {
-  color: #0de7cb;
+  /* color: #0de7cb; */
+  color: #E9BEB5;
   text-decoration: none;
 }
 @media (max-width: 992px) {
