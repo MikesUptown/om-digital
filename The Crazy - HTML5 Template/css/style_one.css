@@ -742,7 +742,7 @@
   right: 0;
   display: block;
   /* background: #0de7cb; */
-  background: #E9BEB5;
+  background: #CB5E64;
   z-index: 888;
 }
 .frame-line.top-frame {
@@ -901,7 +901,7 @@ blockquote::after {
   outline: none;
   background-color: transparent;
   /* border: 3px solid #0de7cb; */
-  border: 3px solid #E9BEB5;
+  border: 3px solid #987F83;
 }
 .btn span {
   position: relative;
@@ -910,7 +910,7 @@ blockquote::after {
 .btn::after {
   content: '';
   /* background-color: #0de7cb; */
-  background-color: #E9BEB5;
+  background-color: #CB5E64;
   top: 0;
   left: 0;
   right: 0;
