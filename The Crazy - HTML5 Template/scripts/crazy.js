@@ -379,9 +379,11 @@ jQuery.noConflict()(function ($) {
 
         $(".typed").typed({
             strings: [
+                "creative",
                 "design",
-                "development",
-                "content"
+                "develop",
+                "content",
+                "new york city"
             ],
             typeSpeed: 50,
             backSpeed: 20,

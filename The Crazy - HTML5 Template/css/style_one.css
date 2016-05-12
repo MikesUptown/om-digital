@@ -927,7 +927,7 @@ blockquote::after {
   height: 100%;
 }
 .btn-white {
-  color: #fff;
+  color: #987F83;
 }
 .btn-white:hover {
   color: #fff;
@@ -1194,11 +1194,11 @@ textarea:focus + .line-input {
   margin-left: 38px;
 }
 .sf-menu > li > a {
-  font-size: 16px;
+  font-size: 20px;
   display: block;
   font-weight: 700;
   text-transform: uppercase;
-  color: #fff;
+  color: #CB5E64;
   position: relative;
   padding: 2px 0;
 }
@@ -1211,7 +1211,7 @@ textarea:focus + .line-input {
   display: block;
   width: 0;
   /* background-color: #0de7cb; */
-  background-color: #E9BEB5;
+  background-color: #987F83;
   transition: all 0.35s ease-in-out;
 }
 .sf-menu > li > a:hover {
@@ -1229,7 +1229,7 @@ textarea:focus + .line-input {
   right: 0;
   bottom: 0;
   z-index: -1;
-  border-bottom: 3px solid #fff;
+  border-bottom: 3px solid #987F83;
 }
 @media (min-width: 1500px) {
   .crazy-border {
@@ -1402,13 +1402,13 @@ textarea:focus + .line-input {
   text-transform: uppercase;
   margin-bottom: 30px;
   line-height: 1em;
-  color: #fff;
+  color: #987F83;
 }
 .title-home h1 span {
   color: #0de7cb;
 }
 .title-home em {
-  color: #fff;
+  color: #CB5E64;
 }
 .title-home .buttons .btn {
   margin: 0 15px 30px 15px;
