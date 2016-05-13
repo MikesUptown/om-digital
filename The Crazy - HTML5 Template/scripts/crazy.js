@@ -381,6 +381,7 @@ jQuery.noConflict()(function ($) {
             strings: [
                 "design",
                 "develop",
+                "strategy",
                 "content",
                 "innovate",
                 "om digital"
