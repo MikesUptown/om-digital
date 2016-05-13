@@ -382,13 +382,14 @@ jQuery.noConflict()(function ($) {
                 "design",
                 "develop",
                 "content",
-                "innovate"
+                "innovate",
+                "om digital"
             ],
             typeSpeed: 50,
-            backSpeed: 20,
+            backSpeed: 50,
             loop: false,
-            backDelay: 2500,
-            showCursor: false
+            backDelay: 4500,
+            showCursor: true
         });
 
         $(".typed-two").typed({
