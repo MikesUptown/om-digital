@@ -1465,7 +1465,8 @@ textarea:focus + .line-input {
   padding: 0;
   line-height: 1em;
   font-family: 'Archivo Black', sans-serif;
-  color: #fff;
+  /* color: #fff; */
+  color: #987F83;
   text-transform: uppercase;
   display: inline-block;
   position: relative;
@@ -1513,7 +1514,8 @@ textarea:focus + .line-input {
 }
 .breadcrumbs ul li {
   float: left;
-  color: #fff;
+  /* color: #fff; */
+  color: #CB5E64;
 }
 .breadcrumbs ul li +li::before {
   content: '/';
@@ -1566,16 +1568,16 @@ textarea:focus + .line-input {
   position: relative;
 }
 .info-block-wrap .info-block {
-  background-color: #020033;
+  background-color: #987F83;
   margin-top: 95px;
   padding: 80px;
-  color: #fff;
+  color: #5E4A65;
 }
 .info-block-wrap .info-block h3 {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 40px;
-  color: #fff;
+  color: #5E4A65;
 }
 .info-block-wrap .image-block {
   position: absolute;
@@ -1602,7 +1604,7 @@ textarea:focus + .line-input {
   width: 8px;
   border-radius: 50%;
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 5px solid #9D0049;
   margin-right: 8px;
 }
 .info-block-wrap .owl-dots .owl-dot.active {
