@@ -794,6 +794,7 @@ body {
   letter-spacing: 0.5px;
   color: #393939;
   margin: 30px;
+  font-weight: bold;
 }
 @media only screen and (max-width: 768px) {
   .frame-line {
@@ -1955,11 +1956,11 @@ ul.progress-bar li p {
 .testimonial-wrap .quote-block h3 {
   text-transform: uppercase;
   margin-top: 0;
-  color: #fff;
+  color: #665D70;
   padding: 0 20px;
 }
 .testimonial-wrap .quote-block p {
-  color: #fff;
+  color: #665D70;
   padding: 0 20px;
   margin-bottom: 0;
 }
