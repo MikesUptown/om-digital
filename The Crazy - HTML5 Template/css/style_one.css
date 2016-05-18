@@ -1928,7 +1928,7 @@ ul.progress-bar li p {
   position: relative;
 }
 .testimonial-wrap .quote-block {
-  background-color: #020033;
+  background-color: #987F83;
   padding: 80px;
   margin: 40px 0 0 0;
   position: relative;
@@ -1942,12 +1942,12 @@ ul.progress-bar li p {
   font-size: 34px;
   margin-top: 50px;
   margin-right: 50px;
-  color: #fff;
+  color: #9D0049;
 }
 .testimonial-wrap .quote-block::after {
   content: '';
   top: -50px;
-  height: 3px;
+  height: 5px;
   background-color: #020033;
   right: 0;
   position: absolute;
@@ -1972,7 +1972,7 @@ ul.progress-bar li p {
 .testimonial-nav i {
   margin-left: 8px;
   font-size: 22px;
-  color: #020033;
+  color: #9D0049;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
 }
