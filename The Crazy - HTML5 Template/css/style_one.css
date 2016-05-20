@@ -1952,7 +1952,7 @@ ul.progress-bar li p {
   content: '';
   top: -50px;
   height: 5px;
-  background-color: #020033;
+  /*background-color: #020033;*/
   right: 0;
   position: absolute;
   left: 0;
