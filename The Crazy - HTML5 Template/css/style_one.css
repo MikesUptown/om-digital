@@ -1461,8 +1461,8 @@ textarea:focus + .line-input {
   background-repeat: no-repeat;
 }
 .page-title h1 {
-  font-size: 60px;
-  letter-spacing: 3px;
+  font-size: 40px;
+  letter-spacing: 12px;
   margin: 0;
   padding: 0;
   line-height: 1em;
@@ -1483,9 +1483,11 @@ textarea:focus + .line-input {
 }
 .page-title h1::before {
   left: -46px;
+  visibility: hidden;
 }
 .page-title h1::after {
   right: -46px;
+  visibility: hidden;
 }
 @media (max-width: 768px) {
   .page-title h1 {
