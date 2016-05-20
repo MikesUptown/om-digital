@@ -307,8 +307,9 @@
   display: block;
 }
 .pt150 {
-  padding-top: 150px !important;
+  padding-top: 10px !important;
   display: block;
+  padding-bottom: 10px !important;
 }
 .pb150 {
   padding-bottom: 150px !important;
