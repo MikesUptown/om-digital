@@ -379,7 +379,6 @@ jQuery.noConflict()(function ($) {
 
         $(".typed").typed({
             strings: [
-                "      ",
                 "design",
                 "      ",
                 "develop",
