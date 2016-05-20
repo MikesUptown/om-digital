@@ -379,14 +379,20 @@ jQuery.noConflict()(function ($) {
 
         $(".typed").typed({
             strings: [
+                "      ",
                 "design",
+                "      ",
                 "develop",
+                "       ",
                 "strategy",
+                "        ",
                 "content",
+                "       ",
                 "innovate",
+                "        ",
                 "om digital"
             ],
-            typeSpeed: 50,
+            typeSpeed: 70,
             backSpeed: 50,
             loop: false,
             backDelay: 4500,
