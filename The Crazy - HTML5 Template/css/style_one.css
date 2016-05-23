@@ -990,7 +990,11 @@ blockquote::after {
 input,
 textarea {
   border: none;
+<<<<<<< HEAD
   /* border-bottom: 1px solid #fff; */
+=======
+  border-bottom: 5px solid #CB5E64;
+>>>>>>> master
   border-top: none;
   border-left: none;
   border-right: none;
@@ -2513,10 +2517,10 @@ footer h2 {
 .footer-copy p {
   margin: 0;
   padding: 0;
-  color: #fff;
+  color: #987F83;
 }
 .footer-copy a {
-  color: #0de7cb;
+  color: #CB5E64;
 }
 .return-msg {
   color: #fe3237;
