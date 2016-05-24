@@ -991,11 +991,7 @@ blockquote::after {
 input,
 textarea {
   border: none;
-<<<<<<< HEAD
-  /* border-bottom: 1px solid #fff; */
-=======
-  border-bottom: 5px solid #CB5E64;
->>>>>>> master
+  border-bottom: 1px solid #fff;
   border-top: none;
   border-left: none;
   border-right: none;
