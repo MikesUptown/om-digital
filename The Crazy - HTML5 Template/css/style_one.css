@@ -2502,10 +2502,10 @@ footer h2 {
 .footer-social ul li a {
   display: block;
   font-size: 22px;
-  color: #fff;
+  color: #987F83;
 }
 .footer-social a:hover {
-  color: #0de7cb;
+  color: #CB5E64;
   text-decoration: none;
 }
 .footer-social a:hover i {
