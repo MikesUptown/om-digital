@@ -1005,7 +1005,7 @@ textarea {
   max-width: 100%;
   background-color: transparent;
   padding: 13px 15px;
-  color: #fff;
+  color: #000;
 }
 input:focus + .line-input,
 textarea:focus + .line-input {
