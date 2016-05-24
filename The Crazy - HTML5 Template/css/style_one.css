@@ -957,6 +957,7 @@ blockquote::after {
   top: 85%;
 }
 .btn.line-hor::before {
+  visibility: hidden;
   content: '';
   display: block;
   position: absolute;
