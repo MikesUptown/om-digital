@@ -18,19 +18,19 @@
 	05-PRELOADER
 	06-MENU
 	07-TITLE
-	08-PAGE TITLE 
+	08-PAGE TITLE
 	09-BREADCRUMBS
 	10-CONTACT
 	11-ABOUT US
 	12-FEATURES
 	13-COUNTERS
 	14-Clients
-	15-Services 
+	15-Services
 	16-VIDEO
 	17-PROGRESS BAR
-	18-OUR TEAM 
+	18-OUR TEAM
 	19-TESTIMONIAL
-	20-BLOG 
+	20-BLOG
 	21-POST SINGLE
 	22-COMMENTS
 	23-PORTFOLIO
@@ -1787,13 +1787,13 @@ textarea:focus + .line-input {
 }
 .services-nav i {
   margin-right: 8px;
-  font-size: 22px;
+  font-size: 42px;
   color: #020033;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
 }
 .services-nav i:hover {
-  color: #0de7cb;
+  color: #CB5E64;
 }
 @media (min-width: 1500px) {
   .sep-with-icon i {
