@@ -1784,6 +1784,8 @@ textarea:focus + .line-input {
 .services-nav {
   height: 60px;
   line-height: 60px;
+  position: absolute;
+  right: 10px;
 }
 .services-nav i {
   margin-right: 8px;
