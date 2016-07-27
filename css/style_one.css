@@ -1789,9 +1789,9 @@ textarea:focus + .line-input {
 }
 .services-nav i {
   margin-right: 8px;
-  font-size: 42px;
+  font-size: 22px;
   color: #020033;
-  cursor: pointer;
+  cursor: grab;
   transition: color 0.3s ease-in-out;
 }
 .services-nav i:hover {
